@@ -3,7 +3,7 @@ const btnCreateRef = document.querySelector(`#controls [data-action="render"]`);
 const btnRemRef = document.querySelector(`#controls [data-action="destroy"]`);
 const boxesRef = document.querySelector(`#boxes`);
 
-valueRef.addEventListener(`blur`, (e) => {
+valueRef.addEventListener(`blur`, e => {
   let count = Number(e.currentTarget.value);
   btnCreateRef.addEventListener(`click`, () => {
     createBoxes(count);
@@ -29,5 +29,5 @@ function createBoxes(amount) {
 }
 
 function destroyBoxes() {
-  boxesRef.innerHTML = "";
+  boxesRef.innerHTML = '';
 }
