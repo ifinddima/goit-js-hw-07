@@ -11,9 +11,11 @@ const ulIngRef = document.querySelector(`#ingredients`);
 createItem(ingredients, ulIngRef);
 
 function createItem(arr, parrent) {
-  arr.forEach(el => {
+  const arrLi = [];
+  arr.map(el => {
     let li = document.createElement(`li`);
     li.textContent = el;
-    parrent.append(li);
+    arrLi.push(li);
   });
+  parrent.append(...arrLi);
 }
