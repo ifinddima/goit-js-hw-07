@@ -14,6 +14,7 @@ btnRemRef.addEventListener(`click`, destroyBoxes);
 
 function createBoxes(amount) {
   let sizeBox = 30;
+  const arrDiv = [];
   for (let i = 0; i < amount; i += 1) {
     let randomR = Math.round(Math.random() * (255 - 1) + 1);
     let randomG = Math.round(Math.random() * (255 - 1) + 1);
@@ -24,8 +25,9 @@ function createBoxes(amount) {
     div.style.height = `${sizeBox}px`;
     div.style.background = `rgb(${randomR}, ${randomG}, ${randomB})`;
     div.style.margin = `10px`;
-    boxesRef.append(div);
+    arrDiv.push(div);
   }
+  boxesRef.append(...arrDiv);
 }
 
 function destroyBoxes() {
