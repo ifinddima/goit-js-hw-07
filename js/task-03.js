@@ -15,19 +15,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
+const gallerys = [];
 const galleryRef = document.querySelector(`#gallery`);
 galleryRef.classList.add(`display-flex`);
 
 images.forEach(el => {
   let li = document.createElement(`li`);
-  let img = document.createElement(`img`);
   li.classList.add(`item`);
-  img.classList.add(`imgItem`);
-  img.setAttribute('width', '300');
-  img.setAttribute('height', '300');
-  img.setAttribute(`src`, el.url);
-  img.setAttribute(`alt`, el.alt);
-  gallery.append(li);
-  li.append(img);
+  li.innerHTML = `<img src="${el.url}" alt="${el.alt}" width="300" height="300" >`;
+  gallerys.push(li);
 });
+
+galleryRef.append(...gallerys);
