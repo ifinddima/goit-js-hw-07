@@ -1,4 +1,4 @@
-const categoriesRef = document.querySelectorAll(`#categories .item`);
+const categoriesRef = document.querySelectorAll('#categories .item');
 
 categoriesRef.forEach(el => {
   console.log(`Категория: ${el.firstElementChild.textContent}`);

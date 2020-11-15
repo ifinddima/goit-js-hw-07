@@ -16,12 +16,12 @@ const images = [
   },
 ];
 
-const galleryRef = document.querySelector(`#gallery`);
-galleryRef.classList.add(`display-flex`);
+const galleryRef = document.querySelector('#gallery');
+galleryRef.classList.add('display-flex');
 
 const gallerys = images.map(el => {
-  let li = document.createElement(`li`);
-  li.classList.add(`item`);
+  let li = document.createElement('li');
+  li.classList.add('item');
   li.innerHTML = `<img src="${el.url}" alt="${el.alt}" width="300" height="300" >`;
   return li;
 });
