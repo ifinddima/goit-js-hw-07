@@ -15,15 +15,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const gallerys = [];
+
 const galleryRef = document.querySelector(`#gallery`);
 galleryRef.classList.add(`display-flex`);
 
-images.forEach(el => {
+const gallerys = images.map(el => {
   let li = document.createElement(`li`);
   li.classList.add(`item`);
   li.innerHTML = `<img src="${el.url}" alt="${el.alt}" width="300" height="300" >`;
-  gallerys.push(li);
+  return li;
 });
 
 galleryRef.append(...gallerys);
